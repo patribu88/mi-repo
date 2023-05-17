@@ -8,5 +8,13 @@
 </head>
 <body>
     CLIENTES
+
+    {% for cliente in clientes  %}
+        <h2> {{cliente.nombre}} </h2>
+        <p> {{cliente.apellido}} </p>
+        <p> {{cliente.nacimiento}} </p>
+    {% endfor %}
+
+    <a href="{% url 'index' %}">Ir al menú</a>
 </body>
 </html>
